@@ -1,7 +1,10 @@
 import Stage from 'stage-js/platform/web';
 Stage(function (stage) {
   stage.viewbox(200, 200).on("click", function () {
-    draw();
+    document.addEventListener("keydown", (event) => {
+      console.log(`${Math.random()} key=${event.key}, code=${event.code}`);
+      draw(Math.random());
+    });
   });
 
   var width = 30,
@@ -14,7 +17,7 @@ Stage(function (stage) {
 
   draw();
 
-  function draw() {
+  function draw(angle=1) {
     image.image(
       Stage.canvas(function (ctx) {
         p = 3;
@@ -26,7 +29,7 @@ Stage(function (stage) {
         // draw star
         ctx.translate(width / 2, height / 2);
         ctx.beginPath();
-        ctx.rotate(Math.PI / p);
+        ctx.rotate(angle* Math.PI / p);
         ctx.moveTo(0, 0 - r1);
         for (var i = 0; i < p; i++) {
           ctx.rotate(Math.PI / p);
