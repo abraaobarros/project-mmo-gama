@@ -2,7 +2,6 @@ use std::env;
 use futures_util::{future, StreamExt, TryStreamExt};
 use tokio::net::{TcpListener, TcpStream};
 use tokio_tungstenite::{accept_async};
-use std::io::{Error, ErrorKind};
 
 async fn accept_connection(tcp_stream: TcpStream) {
     let peer_address = tcp_stream.peer_addr()
