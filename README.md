@@ -35,3 +35,12 @@ backend:
   - connect(player);
   - move(keys);
   - shoot(theta);
+
+
+
+## Running the Server
+
+```sh
+cd server/
+cargo run 0.0.0.0:90001
+```
