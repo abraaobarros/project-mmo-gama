@@ -22,8 +22,11 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: "asset/resource",
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "file-loader",
+        options: {
+          name: "/public/icons/[name].[ext]",
+        },
       },
     ],
   },
