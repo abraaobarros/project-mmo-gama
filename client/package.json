@@ -1,0 +1,25 @@
+{
+  "name": "project-mmo-gama",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/abraaobarros/project-mmo-gama",
+  "author": "Abraao",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "dependencies": {
+    "css-loader": "^6.2.0",
+    "sass": "^1.41.1",
+    "sass-loader": "^12.1.0",
+    "stage-js": "^0.9.4",
+    "style-loader": "^3.2.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
+  }
+}
