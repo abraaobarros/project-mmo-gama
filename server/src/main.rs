@@ -1,9 +1,9 @@
 mod cli;
 mod networking;
+mod server;
 
 use std::net::{IpAddr, SocketAddr};
 use cli::{ServerArgs};
-
 
 #[tokio::main]
 async fn main() {
